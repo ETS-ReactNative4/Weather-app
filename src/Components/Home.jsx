@@ -1,15 +1,11 @@
 import React from "react";
 
 import claudy from "../Assests/img/day.claudy.svg";
+import nightclaudy from "../Assests/img/night.claudy.svg";
 import clear from "../Assests/img/day.clear.svg";
 import rain from "../Assests/img/day.rain.svg";
 import night from "../Assests/img/night.clear.svg";
-// import liteclaudy from "../Assests/img/liteday.clear.svg";
-// import liteclear from "../Assests/img/liteday.clear.svg";
-// import literain from "../Assests/img/liteday.rain.svg";
-// import litenight from "../Assests/img/litenight.clear.svg";
-
-import { AreaChart, Area, Tooltip, ResponsiveContainer } from "recharts";
+import { AreaChart, Area, ResponsiveContainer } from "recharts";
 
 function Home() {
   let search = "toshkent";
@@ -84,10 +80,11 @@ function Home() {
 
         const code = data.current.condition.code;
         if (code === 1000) {
+          imgg = clear;
           if (!data.current.is_day) {
             imgg = night;
           }
-          imgg = clear;
+          console.log(data);
         } else if (
           code === 1003 ||
           code === 1006 ||
@@ -101,6 +98,9 @@ function Home() {
           code === 1282
         ) {
           imgg = claudy;
+          if (!data.current.is_day) {
+            imgg = nightclaudy;
+          }
         } else if (
           code === 1063 ||
           code === 1069 ||
@@ -183,7 +183,9 @@ function Home() {
                       bottom: 0,
                     }}
                   >
-                    <Tooltip name="name" />
+                    {/* <XAxis dataKey="name" /> */}
+                    {/* <YAxis /> */}
+                    {/* <Tooltip name="name" /> */}
                     <Area
                       type="monotone"
                       dataKey="Temperatura"
