@@ -5,12 +5,20 @@ import nightclaudy from "../Assests/img/night.claudy.svg";
 import clear from "../Assests/img/day.clear.svg";
 import rain from "../Assests/img/day.rain.svg";
 import night from "../Assests/img/night.clear.svg";
+
+import liteclaudy from "../Assests/img/lite.day.claudy.svg";
+import litenightclaudy from "../Assests/img/lite.night.claudy.svg";
+import liteclear from "../Assests/img/lite.day.clear.svg";
+import literain from "../Assests/img/lite.day.rain.svg";
+import litenight from "../Assests/img/lite.night.clear.svg";
+
 import { AreaChart, Area, ResponsiveContainer } from "recharts";
 
 function Home() {
   let search = "toshkent";
   const [state, useState] = React.useState("");
   let imgg = clear;
+  let liteimg = liteclear;
 
   function dayOfTheWeek(year, moth, day) {
     const weekday = [
@@ -81,10 +89,11 @@ function Home() {
         const code = data.current.condition.code;
         if (code === 1000) {
           imgg = clear;
+          liteimg = liteclear;
           if (!data.current.is_day) {
             imgg = night;
+            liteimg = litenight;
           }
-          console.log(data);
         } else if (
           code === 1003 ||
           code === 1006 ||
@@ -98,8 +107,10 @@ function Home() {
           code === 1282
         ) {
           imgg = claudy;
+          liteimg = liteclaudy;
           if (!data.current.is_day) {
             imgg = nightclaudy;
+            liteimg = litenightclaudy;
           }
         } else if (
           code === 1063 ||
@@ -120,6 +131,7 @@ function Home() {
           code === 1252
         ) {
           imgg = rain;
+          liteimg = literain;
         }
 
         let item = (
@@ -199,7 +211,7 @@ function Home() {
               <div className="home__right-list">
                 <div className="home__right-item blue">
                   <p className="home__right-title1">Today</p>
-                  <img src={imgg} alt="" width="50" height="50" />
+                  <img src={liteimg} alt="" width="50" height="50" />
                   <p className="home__right-desc">Humidity</p>
                   <p className="home__right-desc1">
                     {data.forecast.forecastday[0].day.avghumidity} %
