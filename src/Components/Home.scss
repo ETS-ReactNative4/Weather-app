@@ -1,0 +1,153 @@
+.home {
+  padding: 30px;
+}
+
+.home__container {
+  display: flex;
+
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.home__left {
+  width: 35%;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home__left-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 85px;
+}
+
+.home__left-input h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1px;
+}
+
+.home__left-input input {
+  margin: 0;
+  margin-left: 20px;
+  padding: 8px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1.5px solid #ccc;
+}
+
+.home__left-input input:focus {
+  outline: none;
+}
+
+.home__data {
+  margin: 0;
+  font-size: 18px;
+  color: rgb(131, 129, 129);
+}
+
+.home__left-cloud {
+  display: flex;
+  align-items: center;
+}
+
+.home__left-cloud h1 {
+  font-size: 5em;
+  font-weight: 450;
+  margin: 0;
+}
+
+.home__left-cloud img {
+  color: #ccc;
+}
+
+.home__left-desc {
+  font-size: 2.5em;
+  font-weight: 450;
+  margin: 0;
+}
+
+.home__left-det {
+  display: flex;
+  margin-top: 85px;
+}
+
+.home__left-detIt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home__left-detIt + .home__left-detIt {
+  margin-left: 30px;
+}
+
+.home__left-detIt h3 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  color: rgb(131, 129, 129);
+}
+
+.home__left-detIt p {
+  margin: 0;
+}
+
+#home__right {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  padding: 60px 40px;
+}
+
+.home__right-title {
+  margin: 0;
+}
+
+.home__right-chart {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 250px;
+}
+
+.home__right-list {
+  display: flex;
+  align-items: center;
+}
+
+.home__right-item {
+  width: 25%;
+  padding: 38px 45px;
+  align-items: center;
+  text-align: center;
+}
+
+.home__right-title1 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.home__right-desc {
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.home__right-desc1 {
+  margin: 0;
+}
+
+.blue {
+  background-color: rgb(62, 134, 241);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.home__right-chart-desc {
+  margin: 0;
+  padding-top: 20px;
+}
